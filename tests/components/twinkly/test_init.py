@@ -22,16 +22,16 @@ async def test_load_unload_entry(hass: HomeAssistant):
     """Validate that setup entry also configure the client."""
     client = ClientMock()
 
-    id = str(uuid4())
+    idnum = str(uuid4())
     config_entry = MockConfigEntry(
         domain=TWINKLY_DOMAIN,
         data={
             CONF_HOST: TEST_HOST,
-            CONF_ID: id,
+            CONF_ID: idnum,
             CONF_NAME: TEST_NAME_ORIGINAL,
             CONF_MODEL: TEST_MODEL,
         },
-        entry_id=id,
+        entry_id=idnum,
     )
 
     config_entry.add_to_hass(hass)
@@ -50,12 +50,12 @@ async def test_config_entry_not_ready(hass: HomeAssistant):
     """Validate that config entry is retried."""
     client = ClientMock()
     client.is_offline = True
-
+    idnum = str(uuid4())
     config_entry = MockConfigEntry(
         domain=TWINKLY_DOMAIN,
         data={
             CONF_HOST: TEST_HOST,
-            CONF_ID: id,
+            CONF_ID: idnum,
             CONF_NAME: TEST_NAME_ORIGINAL,
             CONF_MODEL: TEST_MODEL,
         },
