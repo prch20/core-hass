@@ -1,0 +1,15 @@
+{
+  "config": {
+    "title": "YouTube Setup",
+    "step": {
+      "user": {
+        "data": {
+          "api_key": "YouTube data API Key",
+          "channel_id": "YouTube Channel ID"
+        },
+        "description": "Enter your credentials.",
+        "title": "YouTube Setup"
+      }
+    }
+  }
+}

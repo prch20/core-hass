@@ -1,0 +1,9 @@
+{
+  "name": "YouTube",
+  "domain": "youtube",
+  "config_flow": true,
+  "requirements": [],
+  "version": "1.0.0",
+  "iot_class": "cloud_polling",
+  "icon": "mdi:youtube"
+}
